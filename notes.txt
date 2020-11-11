@@ -1,0 +1,110 @@
+
+git init
+
+
+-- show the git repository
+
+-- Add README.md
+
+git add .
+
+git status -s
+git log --oneline
+
+git commit -m ""
+
+
+
+git config --global user.name “Piotr Szul”
+git config --global user.email piotr.szul@csiro.au
+
+
+
+-- add book
+
+-- add first chapter
+
+-- commit
+
+-- add contents of the first chapter
+
+-- commit
+
+
+
+
+git log --oneline
+
+git show 
+
+
+git diff
+
+
+-- .gitignore
+
+
+
+-- show gitui
+
+
+# Working with repositories
+
+
+
+- create and setup repository in github
+
+
+	git push
+
+
+
+- configure ssh keys
+
+	ssh-keygen
+
+
+ git push
+
+
+
+
+- git clone
+
+
+
+- git push
+
+
+
+- git pull
+
+
+
+
+# working with history
+
+
+git reset
+
+git revert
+
+git restore
+
+git tag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
