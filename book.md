@@ -8,12 +8,18 @@ A story about a girl entering a magical world.
 
 
 
-# CHAPTER 1: Following the White Rabbit
+# Chapter 1:  Down the Rabbit Hole
 
 Alice follows a White Rabbit down the rabbit hole.
 
 
-# CHAPTER 3: Mad Hatter Party
+# Chapter 2 : Mad Hatter Tea Party
 
+Alice attends an unusual tea party.
+
+
+# Chapter 3: The Red Queen
+
+Alice meets the Red Queen and get jam every second day.
 
 
