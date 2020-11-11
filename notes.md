@@ -247,14 +247,76 @@ Resove the conflict:
 
 # Working with history
 
+Restore changes in working tree
+
+
+	rm book.md # oops 
+
+	git status
+	git restore
+
+	ls # uff
+
+
+Restore changes in staged.
+
+	> make and stage a wrong change
+	git status -s
+	> make anoter change
+	git restore --staged .
+	git status
 
 	git restore
 
-	git reset
+Clean up non tracked files.
 
-	git revert
+	touch junk.txt
+	git sttus
+	git restore
 
-	git tag
+	git clean -n 
+	git clean -f
+
+	git status
+
+
+Rewite histry with reset. Do not do with pushed commits!
+
+
+	> make and commit a wrong change
+	git log  -l
+	git reset HEAD~1
+	git status -s 
+
+
+
+What if already pushed?
+
+
+	git revert HEAD
+
+
+
+Other things
+
+	git mv book.md contents.md
+
+	git tag -v "v1.0" -m "Tagging version 1.0"
+	
+	git tag -l 
+
+	git show v1.0
+	
+	git push --tags
+
+
+Show in github
+
+
+
+
+
+
 
 
 
