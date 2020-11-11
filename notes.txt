@@ -190,6 +190,13 @@ Go back to `alice` and make and commit a changes in `book.html` and push the cha
 	git log --oneline
 
 
+	Alice meets the Red Queen and gets jam every second day.
+
+	git add .
+	git commit -m "Added contents for chapter 3"
+
+	git log --oneline
+
 Publish the changes(check github first)
 
 	git push #check the github history after
