@@ -12,7 +12,6 @@ Start working on the book:
 
 	Alice in Wonderland
 	===================
-
 	A story about a girl entering a magical world.
 
 
