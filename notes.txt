@@ -154,7 +154,6 @@ Commit with GUI
 # Working with repositories
 
 
-
 Create and setup repository 'alice' in github:
 
 
@@ -208,6 +207,43 @@ Get the changes to `AliceOther`
 	git log --oneline
 	git pull
 	git log --oneline
+
+
+
+
+# Basic of conflict resolution
+
+
+
+Go back to `alice` and make and commit a changes in `book.html` and push the changes.
+
+	# Chapter 4: The Mock Turtle's Story
+	Alice listens to the sad story of Mock Tutrle
+
+	git add .
+	git commit -m "Added Chapter 4"
+
+	git push
+
+
+
+Go back to `AliceOter` and make and commit a changes in `book.html` and push the changes.
+
+	# Chapter 5:  Who Stole the Tart?
+	Alice attends the trial.
+	git add .
+
+	git commit -m "Added Chapter 5"
+	git push  # oops .... 
+
+Resove the conflict:
+
+	git pull
+	>>  fix the file
+	git add .
+	git commit -m "Merged chapter 4"
+	git push
+
 
 
 # Working with history

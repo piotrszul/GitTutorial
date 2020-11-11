@@ -22,4 +22,15 @@ Alice attends an unusual tea party.
 
 Alice meets the Red Queen and get jam every second day.
 
+# Chapter 4: The Mock Turtle's Story
 
+Alice listens to the sad story of Mock Tutrle
+
+
+# Chapter 5:  Who Stole the Tart?
+
+Alice attends the trial.
+
+# The Ending
+
+Alice suddenly wakes up and finds herself back on her sister’s lap at the riverbank.
