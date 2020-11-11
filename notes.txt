@@ -155,46 +155,64 @@ Commit with GUI
 
 
 
-- create and setup repository in github
+Create and setup repository 'alice' in github:
 
 
-	git push
+Setup SSH keys in github.
 
 
-
-- configure ssh keys
-
-	ssh-keygen
+	ls ~/.ssh
+	ssh-keygen # if needed
 
 
- git push
+Initial `push`
 
 
-
-
-- git clone
+	git push -set-... (as in github instructions)
 
 
 
-- git push
+Clone the repository into another localtion
 
 
-
-- git pull
-
-
-
-
-# working with history
+	git clone ...    AliceOther
+	cd AliceSecond
+	git log --oneline
 
 
-git reset
+Go back to `alice` and make and commit a changes in `book.html` and push the changes.
 
-git revert
+	# Chapter 3: The Red Queen
 
-git restore
+	git add .
+	git commit -m "Added heading for chapter 3"
 
-git tag
+	git log --oneline
+
+
+Publish the changes(check github first)
+
+	git push #check the github history after
+
+
+Get the changes to `AliceOther`
+
+	cd ../AliceOther
+	git log --oneline
+	git pull
+	git log --oneline
+
+
+# Working with history
+
+
+	git restore
+
+	git reset
+
+	git revert
+
+	git tag
 
 
 
