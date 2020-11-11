@@ -1,51 +1,154 @@
-
-git init
-
-
--- show the git repository
-
--- Add README.md
-
-git add .
-
-git status -s
-git log --oneline
-
-git commit -m ""
+Git intro
+=========
 
 
+# The Basics
 
-git config --global user.name “Piotr Szul”
-git config --global user.email piotr.szul@csiro.au
+Start working on the book:
+
+- create a directory `Alice` and enter it
+- create a file `book.md` with the following:
+
+
+	Alice in Wonderland
+	===================
+
+	A story about a girl entering a magical world.
 
 
 
--- add book
-
--- add first chapter
-
--- commit
-
--- add contents of the first chapter
-
--- commit
+Initialize git repository
 
 
+	git init    # initialize the repository
 
 
-git log --oneline
-
-git show 
+Ashow the git repository in `.git`
 
 
-git diff
+	git status 				# check the status
+	git status -s 
+	
+
+Commit the first change to the repository:
 
 
--- .gitignore
+	git add .
+	git status -s
+	git commit -m "Initial version"
+
+
+Fix the metadata (configure git:)
+
+
+	git config --global user.name “Piotr Szul”
+	git config --global user.email piotr.szul@csiro.au
+
+	git commit --amend --reset-author
 
 
 
--- show gitui
+Check the history:
+
+	git log 
+	git log --oneline
+
+
+
+Open `gihub desktop` and check the visual represntation of the history.
+
+
+
+Add the first chapter to `book.html`:
+
+	Chapter 1:  Down the Rabbit Hole
+
+	Alice follows a White Rabbit down the rabbit hole.
+
+
+Check status and diff and stage the file
+
+
+	git status -s
+	git diff
+
+	git add .				# stage the changes
+
+	git status -s
+	git diff				# diff agains staged fileds
+	git diff HEAD			# diff against the most recent commit (HEAD)
+
+
+Use pandoc to create compiled book html
+
+	pandoc book.md -s -o output.html
+	open output.html
+
+
+Notice the formatting is incorrect and fix it:
+
+
+	# Chapter 1:  Down the Rabbit Hole
+
+
+Verify the formatting
+
+
+	pandoc book.md -s -o output.html
+	open output.html
+
+
+Check the status and note the `output.html`
+
+	git status -s
+
+
+Ignore the 	`output.html`. Create file `.gitignore` with:
+
+	output.html
+	*.html
+
+
+Commit changes:
+
+	git status -s
+	git add .
+	git status -s
+	git commit -m "Added chapter one; Ignored output.html"
+
+	git log --oneline
+
+
+	git show ....
+
+
+
+Show the history in GUI.
+
+
+Add birnary resources in subdirectory. (copy `assets`)
+
+Modify `book.md`:
+
+	![Ttile image](assets/alice-in-wonderland.jpg)
+
+
+Preview and commit changes:
+
+
+	pandoc book.md -s -o output.html
+	open output.html
+	git status -s
+
+
+	git diff HEAD			# diff against the most recent commit (HEAD)
+	git diff HEAD~1			# diff against the most HEAD -1
+	git log --oneline		# get the ID of the first commit
+
+	git diff <first-commit-hash>	#compare agains a specific commit
+
+
+Commit with GUI
 
 
 # Working with repositories
