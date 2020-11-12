@@ -39,6 +39,7 @@ Commit the first change to the repository:
 
 Fix the metadata (configure git:)
 
+	git log 
 
 	git config --global user.name “Piotr Szul”
 	git config --global user.email piotr.szul@csiro.au
@@ -170,7 +171,7 @@ Initial `push`
 
 
 
-Clone the repository into another localtion
+Clone the repository into another location.
 
 
 	git clone ...    AliceOther
