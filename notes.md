@@ -210,6 +210,9 @@ Get the changes to `AliceOther`
 
 
 
+Note: This can be used to synchonize files between your local machine and HPC environment.
+
+
 # Working with history
 
 Restore changes in working tree
