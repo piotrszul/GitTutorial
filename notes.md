@@ -214,78 +214,6 @@ Get the changes to `AliceOther`
 Note: This can be used to synchonize files between your local machine and HPC environment.
 
 
-# Working with history
-
-Restore changes in working tree
-
-
-	rm book.md # oops 
-
-	git status
-	git restore
-
-	ls # uff
-
-
-Restore changes in staged.
-
-	> make and stage a wrong change
-	git status -s
-	> make anoter change
-	git restore --staged .
-	git status
-
-	git restore
-
-Clean up non tracked files.
-
-	touch junk.txt
-	git status
-	git restore
-
-	git clean -n 
-	git clean -f
-
-	git status
-
-
-Rewite histry with reset. Do not do with pushed commits!
-
-
-	> make and commit a wrong change
-	git log  -l
-	git reset HEAD~1
-	git status -s 
-
-
-
-What if already pushed?
-
-
-	> make and commit a wrong change
-
-	git push
-
-	git revert HEAD
-
-
-
-Other things
-
-	git mv book.md contents.md
-
-	git tag -v "v1.0" -m "Tagging version 1.0"
-	
-	git tag -l 
-
-	git show v1.0
-	
-	git push --tags
-
-
-Show in `Github Deskop`
-
-
 
 # Basic of conflict resolution
 
@@ -328,6 +256,115 @@ Resove the conflict:
 	git push
 
 
+# Working with history
+
+
+Go back to `Alice` and pull the most recent changes
+
+	git pull 
+	git status
+	git log --oneline
+
+Restore changes in working tree
+
+	rm book.md # oops 
+
+	git status
+	git restore .
+
+	ls # uff
+
+	git status  -s
+
+
+	> add some text to book.md
+
+	git status -s
+	git diff
+
+	git restore book.md
+
+	git diff
+	git status  -s
+
+
+Restore changes in staged.
+
+	> add some text to book.md
+	git add .
+
+	git status -s
+
+	git diff  # does not show any changes! (compare agains stagning)
+
+	git diff head 
+
+	> make anoter change
+
+	git status -s
+
+	git diff HEAD
+
+
+	git status # shows helpful tips
+
+	git restore --staged .  # unstage
+
+	git status
+
+	git restore . #  remove local changes
+
+	git status
+
+
+
+Clean up non-tracked files.
+
+	touch junk.txt
+	git status
+	git restore .
+
+	git clean -n 
+	git clean -f
+
+	git status
+
+
+Rewite histry with reset. Do not do with pushed commits!
+
+
+	> make and commit a wrong change
+	git log  --oneline
+	git reset HEAD~1
+	git status -s 
+
+
+What if already pushed?
+
+
+	> make and commit a wrong change
+
+	git push
+
+
+	git log --oneline
+
+	git revert HEAD
+
+
+	git log --oneline
+
+	git push
+
+Other things
+
+	git tag -a "v1.0" -m "Tagging version 1.0"
+	
+	git tag -l 
+
+	git show v1.0
+	
+	git push --tags
 
 
 
